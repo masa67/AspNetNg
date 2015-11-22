@@ -11,7 +11,11 @@ namespace AspNetNg
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/site.css"));
 
-            BundleTable.EnableOptimizations = true;
+            bundles.Add(new ScriptBundle("~/bundles/AspNetNg")
+                .IncludeDirectory("~/Scripts/Controllers", "*.js")
+                .Include("~/Scripts/AspNetNg.js"));
+
+            // BundleTable.EnableOptimizations = true;
         }
     }
 }
