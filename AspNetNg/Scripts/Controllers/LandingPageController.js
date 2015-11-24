@@ -5,10 +5,7 @@
     /*global angular */
     angular
         .module('LandingPage', [])
-        .controller('LandingPageController', ['$scope', function ($scope) {
+        .controller('LandingPageController', ['$scope', '$http', function ($scope, $http) {
 
-            $scope.models = {
-                helloAngular: 'I work!'
-            };
         }]);
 }());
