@@ -1,4 +1,5 @@
-﻿using AspNetNg.Models;
+﻿using AspNetNg.DAL;
+using AspNetNg.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +13,17 @@ namespace AspNetNg.api
 {
     public class DogsController : ApiController
     {
-        [HttpGet]
-        public IHttpActionResult Dog()
+        private IDogRepository dogRepository;
+
+        public DogsController()
         {
+            this.dogRepository = new DogRepository(new DogContext());
+        }
+
+        [HttpPost]
+        public IHttpActionResult Dog(DogDTO dogDto)
+        {
+            Dog dog = dogRepository.GetDogByID(dogDto.DogId);
             return Ok();
         }
     }

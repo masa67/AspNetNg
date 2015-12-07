@@ -6,7 +6,7 @@ using System.Web;
 
 namespace AspNetNg.Models
 {
-    public class DogDTO
+    public class Dog
     {
         [Key]
         public int DogId { get; set; }
@@ -15,6 +15,6 @@ namespace AspNetNg.Models
         public string Breed { get; set; }
         // public byte[] FileAboutDog { get; set; }
 
-        public DogDTO () { }
+        public Dog() { }
     }
 }
