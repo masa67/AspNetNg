@@ -188,6 +188,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\DogModifier.cs" />
     <Compile Include="Migrations\201512081825112_Initial.cs" />
     <Compile Include="Migrations\201512081825112_Initial.Designer.cs">
       <DependentUpon>201512081825112_Initial.cs</DependentUpon>
