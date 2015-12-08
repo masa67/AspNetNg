@@ -23,8 +23,9 @@ namespace AspNetNg.api
         [HttpPost]
         public IHttpActionResult Dog(DogDTO dogDto)
         {
-            IEnumerable<Dog> dogs = dogRepository.GetDogs(); // getDogByID(dogDto.DogId);
-            return Ok();
+            Dog dog = dogRepository.GetDogByID(dogDto.DogId);
+
+            return Json(new { dog = dog });
         }
     }
 }
