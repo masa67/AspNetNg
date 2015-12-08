@@ -23,7 +23,7 @@ namespace AspNetNg.api
         [HttpPost]
         public IHttpActionResult Dog(DogDTO dogDto)
         {
-            Dog dog = dogRepository.GetDogByID(dogDto.DogId);
+            IEnumerable<Dog> dogs = dogRepository.GetDogs(); // getDogByID(dogDto.DogId);
             return Ok();
         }
     }

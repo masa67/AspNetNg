@@ -3,16 +3,20 @@ using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
-public class DogContext : DbContext
+namespace AspNetNg.DAL
 {
-	public DogContext() : base("DogContext")
-	{
-	}
-
-    public DbSet<Dog> Dogs { get; set; }
-
-    protected override void OnModelCreating(DbModelBuilder modelBuilder)
+    public class DogContext : DbContext
     {
-        modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        public DogContext() : base("DogContext")
+        {
+        }
+
+        public DbSet<Dog> Dogs { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }
     }
 }
+

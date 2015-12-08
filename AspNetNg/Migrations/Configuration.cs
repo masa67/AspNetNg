@@ -1,6 +1,9 @@
 namespace AspNetNg.Migrations
 {
+    using Models;
+    using DAL;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -14,18 +17,15 @@ namespace AspNetNg.Migrations
 
         protected override void Seed(DogContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            var dogs = new List<Dog>
+            {
+                new Dog { Name = "Viki", Breed = "Irish Setter" },
+                new Dog { Name = "Timi", Breed = "Cavalier King Charles Spaniel" },
+                new Dog { Name = "Otto", Breed = "Boxer" }
+            };
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            dogs.ForEach(d => context.Dogs.Add(d));
+            context.SaveChanges();
         }
     }
 }

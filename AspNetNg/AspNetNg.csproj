@@ -183,11 +183,14 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\DogContext.cs" />
-    <Compile Include="DAL\DogInitializer.cs" />
     <Compile Include="DAL\DogRepository.cs" />
     <Compile Include="DAL\IDogRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512081825112_Initial.cs" />
+    <Compile Include="Migrations\201512081825112_Initial.Designer.cs">
+      <DependentUpon>201512081825112_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -221,6 +224,11 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201512081825112_Initial.resx">
+      <DependentUpon>201512081825112_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
