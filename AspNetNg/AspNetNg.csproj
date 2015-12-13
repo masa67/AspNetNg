@@ -186,10 +186,12 @@
     <Compile Include="DAL\DogRepository.cs" />
     <Compile Include="DAL\GenericRepository.cs" />
     <Compile Include="DAL\IDogRepository.cs" />
+    <Compile Include="DAL\RepositoryBase.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\DogModifier.cs" />
+    <Compile Include="DAL\IGenericRepository.cs" />
     <Compile Include="Migrations\201512081825112_Initial.cs" />
     <Compile Include="Migrations\201512081825112_Initial.Designer.cs">
       <DependentUpon>201512081825112_Initial.cs</DependentUpon>
