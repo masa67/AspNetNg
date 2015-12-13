@@ -5,7 +5,7 @@ using System.Web;
 
 namespace AspNetNg.DAL
 {
-    public class GrievanceRepository : RepositoryBase<DogContext>
+    public class GrievanceRepository : RepositoryBase<GrievanceContext>
     {
         public GrievanceRepository() : base() { }
 

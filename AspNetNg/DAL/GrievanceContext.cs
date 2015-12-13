@@ -5,13 +5,11 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace AspNetNg.DAL
 {
-    public class DogContext : DbContext
+    public class GrievanceContext : DbContext
     {
-        public DogContext() : base("DogContext")
+        public GrievanceContext() : base("GrievanceContext")
         {
         }
-
-        public DbSet<Dog> Dogs { get; set; }
 
         public DbSet<Grievance> Grievance { get; set; }
         public DbSet<GrievanceStep> GrievanceStep { get; set; }

@@ -174,7 +174,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="api\DogsController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -182,35 +181,26 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="DAL\DogContext.cs" />
-    <Compile Include="DAL\DogRepository.cs" />
+    <Compile Include="DAL\GrievanceContext.cs" />
     <Compile Include="DAL\GrievanceRepository.cs" />
-    <Compile Include="DAL\IDogRepository.cs" />
     <Compile Include="DAL\RepositoryBase.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helper\DogModifier.cs" />
     <Compile Include="DAL\IGenericRepository.cs" />
-    <Compile Include="Migrations\201512081825112_Initial.cs" />
-    <Compile Include="Migrations\201512081825112_Initial.Designer.cs">
-      <DependentUpon>201512081825112_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512131147513_AddGrievance.cs" />
-    <Compile Include="Migrations\201512131147513_AddGrievance.Designer.cs">
-      <DependentUpon>201512131147513_AddGrievance.cs</DependentUpon>
+    <Compile Include="Migrations\201512131339032_Initial.cs" />
+    <Compile Include="Migrations\201512131339032_Initial.Designer.cs">
+      <DependentUpon>201512131339032_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Action.cs" />
     <Compile Include="Models\ActionDirectory.cs" />
-    <Compile Include="Models\Dog.cs" />
     <Compile Include="Models\Filesystem.cs" />
     <Compile Include="Models\Grievance.cs" />
     <Compile Include="Models\GrievanceStep.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\DogDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -218,8 +208,6 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\AspNetNg.js" />
-    <Content Include="Scripts\Controllers\LandingPageController.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -235,17 +223,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Helper\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201512081825112_Initial.resx">
-      <DependentUpon>201512081825112_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512131147513_AddGrievance.resx">
-      <DependentUpon>201512131147513_AddGrievance.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201512131339032_Initial.resx">
+      <DependentUpon>201512131339032_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
