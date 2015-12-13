@@ -17,6 +17,9 @@ namespace AspNetNg.DAL
         public DbSet<Filesystem> Filesystem { get; set; }
         public DbSet<AspNetNg.Models.Action> Action { get; set; }
 
+        public DbSet<MyOrderModel> MyOrderModel { get; set; }
+        public DbSet<MyOrderDetailModel> MyOrderDetailModel { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
