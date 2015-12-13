@@ -26,6 +26,8 @@ namespace AspNetNg.Migrations
 
             dogs.ForEach(d => context.Dogs.Add(d));
             context.SaveChanges();
+
+            DAL.GenericRepository repo = new GenericRepository(context);
         }
     }
 }

@@ -184,6 +184,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\DogContext.cs" />
     <Compile Include="DAL\DogRepository.cs" />
+    <Compile Include="DAL\GenericRepository.cs" />
     <Compile Include="DAL\IDogRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -193,9 +194,18 @@
     <Compile Include="Migrations\201512081825112_Initial.Designer.cs">
       <DependentUpon>201512081825112_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512121847484_Grievance.cs" />
+    <Compile Include="Migrations\201512121847484_Grievance.Designer.cs">
+      <DependentUpon>201512121847484_Grievance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Action.cs" />
+    <Compile Include="Models\ActionDirectory.cs" />
     <Compile Include="Models\Dog.cs" />
+    <Compile Include="Models\Filesystem.cs" />
+    <Compile Include="Models\Grievance.cs" />
+    <Compile Include="Models\GrievanceStep.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\DogDTO.cs" />
@@ -209,7 +219,9 @@
     <Content Include="Scripts\AspNetNg.js" />
     <Content Include="Scripts\Controllers\LandingPageController.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -229,6 +241,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201512081825112_Initial.resx">
       <DependentUpon>201512081825112_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512121847484_Grievance.resx">
+      <DependentUpon>201512121847484_Grievance.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
