@@ -17,7 +17,7 @@ namespace AspNetNg.DAL
         IQueryable<T> QueryNoTracking<T>(Expression<Func<T, bool>> predicate) where T : class;
         bool Any<T>(Expression<Func<T, bool>> predicate) where T : class;
         IQueryable<T> GetAll<T>() where T : class;
-        bool Save<T>(T entity) where T : class;
+        T Save<T>(T entity) where T : class;
         bool Update<T>(T entity) where T : class;
         void UpdateNoSave<T>(T entity) where T : class;
         bool Delete<T>(T entity) where T : class;

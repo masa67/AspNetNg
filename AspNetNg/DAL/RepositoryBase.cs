@@ -132,10 +132,10 @@ namespace AspNetNg.DAL
             return DataContext.Set<T>();
         }
 
-        public virtual bool Save<T>(T entity) where T : class
+        public virtual T Save<T>(T entity) where T : class
         {
-            DataContext.Set<T>().Add(entity);
-            return DataContext.SaveChanges() > 0;
+            T res = DataContext.Set<T>().Add(entity);
+            return (DataContext.SaveChanges() > 0) ? res : null;
         }
 
         public async virtual Task<bool> SaveAsync<T>(T entity) where T : class

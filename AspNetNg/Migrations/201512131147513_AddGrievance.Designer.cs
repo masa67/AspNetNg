@@ -7,13 +7,13 @@ namespace AspNetNg.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Grievance : IMigrationMetadata
+    public sealed partial class AddGrievance : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Grievance));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddGrievance));
         
         string IMigrationMetadata.Id
         {
-            get { return "201512121847484_Grievance"; }
+            get { return "201512131147513_AddGrievance"; }
         }
         
         string IMigrationMetadata.Source

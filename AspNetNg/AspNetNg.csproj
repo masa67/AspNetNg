@@ -184,7 +184,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\DogContext.cs" />
     <Compile Include="DAL\DogRepository.cs" />
-    <Compile Include="DAL\GenericRepository.cs" />
+    <Compile Include="DAL\GrievanceRepository.cs" />
     <Compile Include="DAL\IDogRepository.cs" />
     <Compile Include="DAL\RepositoryBase.cs" />
     <Compile Include="Global.asax.cs">
@@ -196,9 +196,9 @@
     <Compile Include="Migrations\201512081825112_Initial.Designer.cs">
       <DependentUpon>201512081825112_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201512121847484_Grievance.cs" />
-    <Compile Include="Migrations\201512121847484_Grievance.Designer.cs">
-      <DependentUpon>201512121847484_Grievance.cs</DependentUpon>
+    <Compile Include="Migrations\201512131147513_AddGrievance.cs" />
+    <Compile Include="Migrations\201512131147513_AddGrievance.Designer.cs">
+      <DependentUpon>201512131147513_AddGrievance.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -244,8 +244,8 @@
     <EmbeddedResource Include="Migrations\201512081825112_Initial.resx">
       <DependentUpon>201512081825112_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512121847484_Grievance.resx">
-      <DependentUpon>201512121847484_Grievance.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201512131147513_AddGrievance.resx">
+      <DependentUpon>201512131147513_AddGrievance.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
