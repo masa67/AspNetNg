@@ -46,8 +46,10 @@ namespace AspNetNg.Migrations
             repo.Save<ActionDirectory>(actionDirectory1);
             repo.Save<ActionDirectory>(actionDirectory2);
 
+            /*
             if (System.Diagnostics.Debugger.IsAttached == false)
                 System.Diagnostics.Debugger.Launch();
+            */
 
             Guid id = grievanceStep1.GrievanceStepID;
             GrievanceStep step = context.GrievanceStep.SingleOrDefault(gs => gs.GrievanceStepID == id);
@@ -60,9 +62,10 @@ namespace AspNetNg.Migrations
             try
             {
                 context.MyOrderModel.AddOrUpdate(
-                    p => p.OrderNumber,
+                    p => p.Id,
                     new PostPayQRCodeFuelOrderModel
                     {
+                        Id = 1,
                         OrderNumber = "00001",
                         Details = new List<MyOrderDetailModel>()
                         {
