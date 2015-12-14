@@ -3,7 +3,7 @@ namespace AspNetNg.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddMyOrderModel : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
@@ -25,6 +25,7 @@ namespace AspNetNg.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         OrderNumber = c.String(),
+                        Discriminator = c.String(nullable: false, maxLength: 128),
                     })
                 .PrimaryKey(t => t.Id);
             

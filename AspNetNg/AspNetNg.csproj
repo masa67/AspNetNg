@@ -181,32 +181,16 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="DAL\GrievanceContext.cs" />
-    <Compile Include="DAL\GrievanceRepository.cs" />
-    <Compile Include="DAL\RepositoryBase.cs" />
+    <Compile Include="DAL\TestContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="DAL\IGenericRepository.cs" />
-    <Compile Include="Migrations\201512131339032_Initial.cs" />
-    <Compile Include="Migrations\201512131339032_Initial.Designer.cs">
-      <DependentUpon>201512131339032_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512131745053_AddMyOrderModel.cs" />
-    <Compile Include="Migrations\201512131745053_AddMyOrderModel.Designer.cs">
-      <DependentUpon>201512131745053_AddMyOrderModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512131754300_AddMyOrderModel2.cs" />
-    <Compile Include="Migrations\201512131754300_AddMyOrderModel2.Designer.cs">
-      <DependentUpon>201512131754300_AddMyOrderModel2.cs</DependentUpon>
+    <Compile Include="Migrations\201512141704431_Initial.cs" />
+    <Compile Include="Migrations\201512141704431_Initial.Designer.cs">
+      <DependentUpon>201512141704431_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Action.cs" />
-    <Compile Include="Models\ActionDirectory.cs" />
-    <Compile Include="Models\Filesystem.cs" />
-    <Compile Include="Models\Grievance.cs" />
-    <Compile Include="Models\GrievanceStep.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MyOrderDetailModel.cs" />
@@ -240,14 +224,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201512131339032_Initial.resx">
-      <DependentUpon>201512131339032_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512131745053_AddMyOrderModel.resx">
-      <DependentUpon>201512131745053_AddMyOrderModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512131754300_AddMyOrderModel2.resx">
-      <DependentUpon>201512131754300_AddMyOrderModel2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201512141704431_Initial.resx">
+      <DependentUpon>201512141704431_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

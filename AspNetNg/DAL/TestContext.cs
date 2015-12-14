@@ -5,17 +5,11 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace AspNetNg.DAL
 {
-    public class GrievanceContext : DbContext
+    public class TestContext : DbContext
     {
-        public GrievanceContext() : base("GrievanceContext")
+        public TestContext() : base("TestContext")
         {
         }
-
-        public DbSet<Grievance> Grievance { get; set; }
-        public DbSet<GrievanceStep> GrievanceStep { get; set; }
-        public DbSet<ActionDirectory> ActionDirectory { get; set; }
-        public DbSet<Filesystem> Filesystem { get; set; }
-        public DbSet<AspNetNg.Models.Action> Action { get; set; }
 
         public DbSet<MyOrderModel> MyOrderModel { get; set; }
         public DbSet<MyOrderDetailModel> MyOrderDetailModel { get; set; }
