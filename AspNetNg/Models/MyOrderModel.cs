@@ -10,6 +10,7 @@ namespace AspNetNg.Models
     {
         public int Id { get; set; }
         public string OrderNumber { get; set; }
+        public string AuthCode { get; set; }
         [Required]
         public List<MyOrderDetailModel> Details { get; set; }
     }

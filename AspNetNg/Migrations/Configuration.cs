@@ -18,28 +18,35 @@ namespace AspNetNg.Migrations
 
         protected override void Seed(AspNetNg.DAL.TestContext context)
         {
-            /*
-            if (System.Diagnostics.Debugger.IsAttached == false)
-                System.Diagnostics.Debugger.Launch();
-            */
+            /*if (System.Diagnostics.Debugger.IsAttached == false)
+                System.Diagnostics.Debugger.Launch(); */
 
             try
             {
-                context.MyOrderModel.AddOrUpdate(
-                    p => p.OrderNumber,
-                    new PostPayQRCodeFuelOrderModel
+                var mom = context.MyOrderModel.Where(m => m.OrderNumber == "00001").FirstOrDefault();
+                if (mom == null)
+                {
+                    mom = new PostPayQRCodeFuelOrderModel
                     {
                         OrderNumber = "00001",
-                        Details = new List<MyOrderDetailModel>()
-                        {
-                            new MyOrderDetailModel()
-                            {
-                                Amount = 5.67M
+                        AuthCode = "ABCDE",
+                        Details = new List<MyOrderDetailModel>() {
+                                new MyOrderDetailModel
+                                {
+                                    Amount = 5.67M
+                                }
                             }
-                        }
-                    }
-                );
-                context.SaveChanges();
+                    };
+
+                    context.MyOrderModel.AddOrUpdate(
+                        p => p.OrderNumber,
+                        mom
+                    );
+                    context.SaveChanges();
+                }
+
+                mom.AuthCode = "ABCDEXXX";
+                context.SaveChanges();               
             }
             catch (DbEntityValidationException ex)
             {

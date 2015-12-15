@@ -189,6 +189,10 @@
     <Compile Include="Migrations\201512141704431_Initial.Designer.cs">
       <DependentUpon>201512141704431_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512151626246_AddAuthCodeToMyOrderModel.cs" />
+    <Compile Include="Migrations\201512151626246_AddAuthCodeToMyOrderModel.Designer.cs">
+      <DependentUpon>201512151626246_AddAuthCodeToMyOrderModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -226,6 +230,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201512141704431_Initial.resx">
       <DependentUpon>201512141704431_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512151626246_AddAuthCodeToMyOrderModel.resx">
+      <DependentUpon>201512151626246_AddAuthCodeToMyOrderModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
