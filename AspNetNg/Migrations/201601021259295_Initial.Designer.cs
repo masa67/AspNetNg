@@ -13,7 +13,7 @@ namespace AspNetNg.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201601020946072_Initial"; }
+            get { return "201601021259295_Initial"; }
         }
         
         string IMigrationMetadata.Source

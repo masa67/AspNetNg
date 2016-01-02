@@ -189,14 +189,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\DogModifier.cs" />
-    <Compile Include="Migrations\201601020946072_Initial.cs" />
-    <Compile Include="Migrations\201601020946072_Initial.Designer.cs">
-      <DependentUpon>201601020946072_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201601021259295_Initial.cs" />
+    <Compile Include="Migrations\201601021259295_Initial.Designer.cs">
+      <DependentUpon>201601021259295_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Dog.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\DogDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -227,8 +226,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201601020946072_Initial.resx">
-      <DependentUpon>201601020946072_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201601021259295_Initial.resx">
+      <DependentUpon>201601021259295_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
