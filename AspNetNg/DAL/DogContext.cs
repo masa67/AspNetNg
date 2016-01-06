@@ -32,6 +32,9 @@ namespace AspNetNg.DAL
         }
 
         public DbSet<Dog> Dogs { get; set; }
+        public DbSet<RootObject> RootObjects { get; set; }
+        public DbSet<AObject> AObjects { get; set; }
+        public DbSet<BObject> BObjects { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

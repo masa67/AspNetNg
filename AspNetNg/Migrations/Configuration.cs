@@ -26,6 +26,13 @@ namespace AspNetNg.Migrations
 
             dogs.ForEach(d => context.Dogs.Add(d));
             context.SaveChanges();
+
+            AObject a1 = new AObject() { Name = "ImA", AField = "adata" };
+            BObject b1 = new BObject() { Name = "ImB", BField = "bdata" };
+            context.AObjects.Add(a1);
+            context.BObjects.Add(b1);
+            context.SaveChanges();
+
         }
     }
 }

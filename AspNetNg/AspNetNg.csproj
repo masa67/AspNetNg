@@ -193,11 +193,16 @@
     <Compile Include="Migrations\201601021259295_Initial.Designer.cs">
       <DependentUpon>201601021259295_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601062020043_Test.cs" />
+    <Compile Include="Migrations\201601062020043_Test.Designer.cs">
+      <DependentUpon>201601062020043_Test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Dog.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\DogDTO.cs" />
+    <Compile Include="Models\RootObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -228,6 +233,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201601021259295_Initial.resx">
       <DependentUpon>201601021259295_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601062020043_Test.resx">
+      <DependentUpon>201601062020043_Test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
