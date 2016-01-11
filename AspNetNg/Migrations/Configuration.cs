@@ -33,6 +33,19 @@ namespace AspNetNg.Migrations
             context.BObjects.Add(b1);
             context.SaveChanges();
 
+            if (System.Diagnostics.Debugger.IsAttached == false)
+                System.Diagnostics.Debugger.Launch();
+
+            var data = from t in context.TravelRequests
+                       join r in context.Resources on t.ResourceID equals r.ResourceID
+                       select new
+                       {
+                           RequestId = t.RequestID,
+                           ResourceId = t.ResourceID,
+                           ResourceName = r.ResourceName
+                       };
+
+            string query = data.ToString();
         }
     }
 }

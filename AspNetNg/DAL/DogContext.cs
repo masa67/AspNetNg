@@ -35,6 +35,8 @@ namespace AspNetNg.DAL
         public DbSet<RootObject> RootObjects { get; set; }
         public DbSet<AObject> AObjects { get; set; }
         public DbSet<BObject> BObjects { get; set; }
+        public DbSet<TravelRequest> TravelRequests { get; set; }
+        public DbSet<Resource> Resources { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
