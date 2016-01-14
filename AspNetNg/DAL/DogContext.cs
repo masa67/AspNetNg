@@ -32,6 +32,8 @@ namespace AspNetNg.DAL
         }
 
         public DbSet<Dog> Dogs { get; set; }
+        public DbSet<User> User { get; set; }
+        public DbSet<Group> Group { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
